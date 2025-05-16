@@ -1,0 +1,23 @@
+:host::ng-deep {
+  .p-customBtn {
+    // background-color: transparent;
+    // border: 1px solid var(--primary-border);
+    // color: var(--primary-border);
+    // padding: 6px 16px;
+    // width: 100px;
+    // border-radius: 0px;
+    // cursor: pointer;
+    // font-size: 14px;
+  }
+
+  .p-button:not(:disabled):hover {
+    // background-color: var(--primary);
+    // border-color: var(--primary);
+    // color: var(--color-white);
+  }
+
+  .p-button {
+    height: 37px;
+    border-radius: 0px;
+  }
+}

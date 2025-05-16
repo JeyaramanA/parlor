@@ -1,0 +1,15 @@
+.loading-txt {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #19253b;
+  position: absolute;
+  top: 56%;
+  width: auto;
+}
+
+:host ::ng-deep .custom-spinner .p-progress-spinner-circle {
+  z-index: 99999;
+  animation: custom-progress-spinner-dash 1.5s ease-in-out infinite,
+    custom-progress-spinner-color 2s ease-in-out infinite;
+}

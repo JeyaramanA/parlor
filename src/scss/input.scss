@@ -1,0 +1,17 @@
+::ng-deep {
+  input {
+    border-radius: 0px !important;
+    height: 37px;
+    font-size: 14px !important;
+
+    &:hover {
+      background-color: var(--color-secondary-hover);
+      border-color: #ddd !important;
+    }
+  }
+
+  .p-inputgroupaddon:last-child,
+  .p-inputgroup > .p-component:first-child {
+    border-radius: 0px !important;
+  }
+}

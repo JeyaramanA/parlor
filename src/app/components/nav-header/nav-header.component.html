@@ -1,0 +1,50 @@
+<!-- Top Header -->
+<div class="nav-header df aic jcsb">
+  <div class="logo bold cp">
+    <!-- <span>LP Encompass Connector</span> -->
+  </div>
+
+  <div class="tabs df jcc">
+    <!-- Top Navigation Menu -->
+    <nav class="top-menu df aic">
+      <a routerLink="/customers" routerLinkActive="active">Customer</a>
+      <a routerLink="/artists" routerLinkActive="active">Artist</a>
+      <a routerLink="/services" routerLinkActive="active">Service</a>
+      <a routerLink="/billings" routerLinkActive="active">Billing</a>
+      <a routerLink="/reports" routerLinkActive="active">Report</a>
+    </nav>
+  </div>
+
+  <div class="user-info df aic">
+    <div
+      class="user-dropdown"
+      (click)="toggleDropdown()"
+      (keydown.enter)="toggleDropdown()"
+      tabindex="0"
+      role="button"
+      [attr.aria-expanded]="showDropdown"
+    >
+      <div class="avatar df aic jcc">
+        {{ getInitials(user.name) }}
+      </div>
+      <div class="user-name-role df aic">
+        <div class="name">{{ user.name }}</div>
+        <div class="role aic df">
+          {{ user.role }}&nbsp;&nbsp;
+          <div class="arrow-down"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-menu" *ngIf="showDropdown">
+      <div
+        class="menu-item"
+        (click)="logOut()"
+        (keydown.enter)="logOut()"
+        tabindex="0"
+      >
+        Log Out
+      </div>
+    </div>
+  </div>
+</div>

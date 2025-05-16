@@ -1,0 +1,61 @@
+@import '../../../scss/mixins.scss';
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .container-wrapper {
+    flex: 1;
+    @include flexbox($justify: center, $align: center, $direction: column);
+
+    .login-container {
+      padding: 40px;
+      width: 450px;
+      @include flexbox($direction: column, $gap: var(--space-md));
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
+      background: var(--color-white);
+    }
+
+    .head img {
+      width: 251px;
+    }
+
+    .login-text {
+      all: unset;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .form {
+      @include flexbox($gap: var(--space-md), $direction: column);
+      padding: 10px 0;
+    }
+  }
+
+  .footer {
+    text-align: center;
+    margin: 24px 0;
+  }
+}
+
+.head {
+  @include flexbox($direction: column, $align: center, $gap: var(--space-md));
+  margin-top: 15px;
+}
+
+:host ::ng-deep .login-btn {
+  background-color: transparent;
+  border: 1px solid var(--primary-border);
+  color: var(--primary-border);
+  padding: 8px 16px;
+  width: 370px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.login-btn:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--color-white);
+}

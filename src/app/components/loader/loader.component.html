@@ -1,0 +1,7 @@
+<div class="loading" *ngIf="isLoading | async">
+  <p-progressSpinner
+    styleClass="custom-spinner"
+    data-test-data="loading"
+  ></p-progressSpinner>
+  <div class="loading-txt">{{ loaderText }}</div>
+</div>

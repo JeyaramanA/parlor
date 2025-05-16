@@ -1,0 +1,40 @@
+<div class="page-wrapper">
+  <div class="container-wrapper">
+    <div class="login-container">
+      <div class="head">
+        <img src="{{ logoSrc }}" alt="logo" />
+        <!-- <h3 class="login-text">Login to your LOS portal</h3> -->
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="form">
+        <div>
+          <label for="email">Username</label>
+          <p-inputgroup>
+            <input pInputText formControlName="email" />
+            <p-inputgroup-addon>
+              <i class="pi pi-user"></i>
+            </p-inputgroup-addon>
+          </p-inputgroup>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <p-inputgroup>
+            <input pInputText type="password" formControlName="password" />
+            <p-inputgroup-addon>
+              <i class="pi pi-lock"></i>
+            </p-inputgroup-addon>
+          </p-inputgroup>
+        </div>
+        <p-toast [position]="'top-center'"/>
+        <p-button
+          label="Sign In"
+          [disabled]="isLoginDisabled"
+          (onClick)="login()"
+          styleClass="login-btn"
+        />
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <p class="footer-text" [innerHTML]="footerText"></p>
+  </div>
+</div>

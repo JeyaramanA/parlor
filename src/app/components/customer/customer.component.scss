@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+::ng-deep .p-table th,
+::ng-deep .p-table td {
+  text-align: left;
+  vertical-align: middle;
+}

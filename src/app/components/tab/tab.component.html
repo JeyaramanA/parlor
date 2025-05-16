@@ -1,0 +1,15 @@
+<div class="tab-container">
+  <div class="tabs">
+    @for (tab of tabs; track $index) {
+    <div
+      class="tab"
+      [class.active]="tab === activeTab"
+      (click)="setActiveTab(tab)"
+      (keydown)="onKeyDown($event, tab)"
+      tabindex="0"
+    >
+      {{ tab }}
+    </div>
+    }
+  </div>
+</div>
